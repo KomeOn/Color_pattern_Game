@@ -16,5 +16,6 @@
 			
 	2. Direct Play"
 			Just click on the link to play :
+			https://komeon.github.io/Color_pattern_Game/
 			
 	
