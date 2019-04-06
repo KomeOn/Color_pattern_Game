@@ -1,0 +1,27 @@
+#level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    color: #FEF2BF;
+}
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.yellow {
+    background-color: yellow;
+}
+.pressed {
+    box-shadow: 0 0 60px white;
+    background-color: rgb(219, 208, 208);
+}
+  
+  

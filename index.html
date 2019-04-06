@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Simon Game</title>
+        <meta name="description" content="Simon Game">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+        <script src="game.js"></script>   
+    </head>
+    <body class="bg-primary">
+        <div class="container-fluid p-4 text-center" id="game-title">
+            <h1 class="display-3 font-weight-bold">Simon Game</h1>
+            <p class="display-4">Follow the pattern, match the colors.</p>
+        </div>
+       <p class="h4 text-center p-2" id="level-title">Press any key, To start the game</p>
+       <div class="container p-4">
+            <div class="row justify-content-center">
+                <div class="col-md-4 btn m-4 green" id="green" style="height: 220px; width: 220px; border: 20px solid black"></div>
+                <div class="col-md-4 btn m-4 red" id="red" style="height: 220px; width: 220px; border: 20px solid black"></div>
+            </div>
+            <div class="row justify-content-center">
+                    <div class="col-md-4 btn m-4 yellow" id="yellow" style="height: 220px; width: 220px; border: 20px solid black"></div>
+                    <div class="col-md-4 btn m-4 blue" id="blue" style="height: 220px; width: 220px; border: 20px solid black"></div>
+                </div>
+       </div>
+    </body>
+</html>
