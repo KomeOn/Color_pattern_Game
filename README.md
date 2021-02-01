@@ -1,6 +1,13 @@
 # Color_pattern_Game
-  Based On Simon Game:
-  
+
+## Simon Game:
+
+	Simon is an electronic game of memory skill. The device creates a series of tones and lights and 
+	requires a user to repeat the sequence. If the user succeeds, the series becomes progressively 
+	longer and more complex. Once the user fails or the time limit runs out, the game is over. 
+
+## Based On Simon Game:
+
 	Instructions :
 	1. Game will start on the press of any keyword.
 	2. In each level, a block of color will highlight showing the new addition to the color pattern.
@@ -17,5 +24,9 @@
 	2. Direct Play"
 			Just copy the link to play :
 			https://komeon.github.io/Color_pattern_Game/
+			
+## Pics From The Game:
+	
+	
 			
 	
