@@ -27,18 +27,18 @@
 
 ## Pics From The Game
 
-    ![Starting screen when the game is not started](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/starting_screen.png)
+![Starting screen when the game is not started](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/starting_screen.png)
         ### Starting screen when the game is not started
         
-    ![Screen when the game started](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/game_page1.png)
+![Screen when the game started](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/game_page1.png)
         ### Screen when the game started  
 
-    ![Screen when the player wins and moves to next level](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/game_page2.png)
+![Screen when the player wins and moves to next level](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/game_page2.png)
         ### Screen when the player wins and moves to next level
 
-    ![Losing screen when the player lost](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/losing_page.png)
+![Losing screen when the player lost](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/losing_page.png)
         ### Losing screen when the player lost
         
-    ![Video gameplay of the Color Pattern Game](https://github.com/KomeOn/Color_pattern_Game/blob/0ae4b365689e0a504e7bd53263b28fb781f1e57f/media/Color%20Pattern%20Game.mp4)
+![Video gameplay of the Color Pattern Game](https://github.com/KomeOn/Color_pattern_Game/blob/0ae4b365689e0a504e7bd53263b28fb781f1e57f/media/Color%20Pattern%20Game.mp4)
         ### Video gameplay of the Color Pattern Game
     
