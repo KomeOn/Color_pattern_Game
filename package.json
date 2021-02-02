@@ -1,0 +1,11 @@
+{
+    "name": "converted",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "emoji-regex": "7.0.3",
+        "eslint": "5.16.0"
+    }
+}

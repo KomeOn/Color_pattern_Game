@@ -46,4 +46,4 @@
 ![Gameplay of the Color Pattern Game](https://github.com/KomeOn/Color_pattern_Game/blob/master/media/gameplay.gif)
 
         Link of the video
-         https://github.com/KomeOn/Color_pattern_Game/blob/0ae4b365689e0a504e7bd53263b28fb781f1e57f/media/Color%20Pattern%20Game.mp4
+         https://github.com/KomeOn/Color_pattern_Game/blob/0ae4b365689e0a504e7bd53263b28fb781f1e57f/media/Color%20Pattern%20Game.mp4/
