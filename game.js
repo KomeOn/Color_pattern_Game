@@ -1,7 +1,6 @@
 $(document).ready(()=>{
     var buttonColors = ["red", "blue", "green", "yellow"];
     var gamePattern = [];
-    var correctSeq = 0;
     var userClickedPattern = [];
     var level = 0;
     var title = $("#level-title");
@@ -50,8 +49,6 @@ $(document).ready(()=>{
         if(userClickedPattern[currentLevel] === gamePattern[currentLevel]){
             if(userClickedPattern.length === gamePattern.length){
                 setTimeout(function() {
-                    // correctSeq += 1;
-                    console(userClickedPattern[currentLevel], " <:> ", gamePattern[currentLevel]);
                     nextSequence();
                 }, delayInMilliseconds);
             }
@@ -65,8 +62,8 @@ $(document).ready(()=>{
               }, 200);
             var audio = new Audio("sounds/wrong.mp3");
             audio.play();
+            writeRecord(currentLevel);
             title.text("Game Over, Press Any Key to Restart");
-            correctSeq = 0;
             startOver();
         }
     }
@@ -75,18 +72,21 @@ $(document).ready(()=>{
         gamePattern = [];
         flag = false;
     }
-    function writeRecord(){
+    function writeRecord(correctSeq){
         let player_name = prompt("Please enter your name");
         let current_datetime = new Date();
-        let score = (level-1)*100
+        let score = (level-1)*100+correctSeq*10;
         let data = {
             name: player_name,
             lvl: level,
             score: score
         };
-
         let record = JSON.stringify(data, null, 2)
-
-        fs.writeFile()
+        let fname = player_name + current_datetime + ".txt"; 
+        fs.writeFile("records/" + fname, record,
+            (err)=> {
+                if (err) throw err;
+                console.log("Data saved");
+            })
     }
 })
