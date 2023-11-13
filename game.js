@@ -63,8 +63,8 @@ $(document).ready(()=>{
             var audio = new Audio("sounds/wrong.mp3");
             audio.play();
             title.text("Game Over, Press Any Key to Restart");
-            writeRecord(currentLevel);
             startOver();
+            setTimeout(function() {writeRecord(currentLevel)}, 800);
         }
     }
     function startOver(){
