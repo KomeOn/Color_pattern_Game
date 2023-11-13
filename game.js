@@ -6,7 +6,7 @@ $(document).ready(()=>{
     var title = $("#level-title");
     var flag = false;
     var clicks = $(".btn");
-    const fs = require('fs');
+    display();
     $(document).keypress(function(){
         if(!flag){
             title.text("Level "+level);
@@ -62,8 +62,8 @@ $(document).ready(()=>{
               }, 200);
             var audio = new Audio("sounds/wrong.mp3");
             audio.play();
-            writeRecord(currentLevel);
             title.text("Game Over, Press Any Key to Restart");
+            writeRecord(currentLevel);
             startOver();
         }
     }
@@ -74,19 +74,55 @@ $(document).ready(()=>{
     }
     function writeRecord(correctSeq){
         let player_name = prompt("Please enter your name");
-        let current_datetime = new Date();
         let score = (level-1)*100+correctSeq*10;
-        let data = {
+        let record = {
             name: player_name,
             lvl: level,
             score: score
         };
-        let record = JSON.stringify(data, null, 2)
-        let fname = player_name + current_datetime + ".txt"; 
-        fs.writeFile("records/" + fname, record,
-            (err)=> {
-                if (err) throw err;
-                console.log("Data saved");
-            })
+        if (localStorage.getItem("score")){
+            let data = JSON.parse(localStorage.getItem("score"));
+            data.push(record);
+            let newData = JSON.stringify(data);
+            localStorage.setItem("score", newData);
+        } 
+        else {
+            let data = [];
+            data.push(record);
+            data = JSON.stringify(data); 
+            localStorage.setItem("score", data);
+        }
+    }
+    function display(){
+        let div = $(".records");
+        let data = JSON.parse(localStorage.getItem("score"));
+        console.log(data);
+        if (data == null )
+        {
+            var p = $('<p style="text-align:center; font-size:20px; font-weight: bold"> </p>').text("No records");
+            div.append(p);
+        }
+        else {
+            let table = $("<table></table>").css({'width': '50%', 'border-collapse': 'collapse',
+                'margin': '15px auto', 'font-family': 'Arial, sans-serif'});
+            let headRow = $("<tr></tr>");
+            headRow.append("<th> Name </th>").css({'background-color': '#4CAF50', 'color': 'white',
+                'text-align': 'center', 'padding': '10px'});;
+            headRow.append("<th> Level </th>").css({'background-color': '#4CAF50', 'color': 'white',
+                'text-align': 'center', 'padding': '10px'});;
+            headRow.append("<th> Score </th>").css({'background-color': '#4CAF50', 'color': 'white',
+                'text-align': 'center', 'padding': '10px'});;
+            table.append(headRow);
+            for(let i = 0; i < data.length; i = i+1){
+                // console.log("name: ", data[i].name, " level: ", data[i].lvl, " score: ", data[i].score);
+                let row = $("<tr></tr>");
+                row.append("<td>" + data[i].name + "</td>").css({'border': '1px solid #ddd','padding': '10px','text-align': 'center'});;
+                row.append("<td>" + data[i].lvl + "</td>").css({'border': '1px solid #ddd','padding': '10px','text-align': 'center'});;
+                row.append("<td>" + data[i].score + "</td>").css({'border': '1px solid #ddd','padding': '10px','text-align': 'center'});;
+                table.append(row);
+            }
+            div.append(table);
+
+        }
     }
 })
