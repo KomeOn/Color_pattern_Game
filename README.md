@@ -9,10 +9,10 @@
 ## Based On Simon Game
 
     Instructions :
-    1. Game will start with the press of any keyword.
+    1. Start or restart the game by pressing any key or tapping the screen.
     2. In each level, a block of color will highlight showing the new addition to the color pattern.
     3. To pass the level, follow the same color pattern from Level 1 to the highlighted block.
-    4. If fail, press any key to restart the game.
+    4. If fail, press any key or tap the screen to restart the game.
 
     Download or Direct Play
 

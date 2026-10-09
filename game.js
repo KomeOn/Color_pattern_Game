@@ -7,13 +7,14 @@ $(document).ready(() => {
     var flag = false;
     var acceptingInput = false;
     var clicks = $(".btn");
-    $(document).keypress(function () {
+        function startGame() {
         if (!flag) {
             title.text("Level " + level);
             nextSequence();
             flag = true;
         }
-    })
+        }
+        $(document).on("keydown click", startGame);
     clicks.click(function () {
         if (!acceptingInput) {
             return;
@@ -69,7 +70,7 @@ $(document).ready(() => {
             }, 200);
             var audio = new Audio("sounds/wrong.mp3");
             audio.play();
-            title.text("Game Over, Press Any Key to Restart");
+                title.text("Game Over, Press Any Key or Tap to Restart");
             startOver();
         }
     }
